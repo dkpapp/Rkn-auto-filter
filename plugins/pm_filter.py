@@ -51,7 +51,7 @@ async def pm_next_page(bot, query):
         n_offset = 0
 
     if not files:
-      await client.send_massage(req_channel, f"#REQUESTED_CONTENT \n\nCONTENT NAME:{search} \nREQUESTED BY : {massage.from_user.first_name}\nUSER ID : {massage.from_user.id}", reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🦋 Mark As Done 🦋", callback_data="close_data")]]))
+        await client.send_massage(req_channel, f"#REQUESTED_CONTENT \n\nCONTENT NAME:{search} \nREQUESTED BY : {massage.from_user.first_name}\nUSER ID : {massage.from_user.id}", reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🦋 Mark As Done 🦋", callback_data="close_data")]]))
         return
     
     if SHORT_URL and SHORT_API:          
