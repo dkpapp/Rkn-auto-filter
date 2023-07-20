@@ -12,7 +12,6 @@ from database.ia_filterdb import Media, get_file_details, get_search_results
 from plugins.group_filter import global_filters
 
 import os
-req_channel = int(os.environ.get('REQ_CHANNEL','-1001821315484'))
 
 
 logger = logging.getLogger(__name__)
@@ -52,7 +51,7 @@ async def pm_next_page(bot, query):
         n_offset = 0
 
     if not files:
-        await client.send_massage(req_channel, f"#REQUESTED_CONTENT \n\n**CONTENT NAME:**`{search}` \n**REQUESTED BY :** {massage.from_user.first_name}\n**USER ID :** {massage.from_user.id}", reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🦋 Mark As Done 🦋", callback_data="close_data")]]))
+      
         return
     
     if SHORT_URL and SHORT_API:          
