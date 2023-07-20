@@ -12,7 +12,7 @@ from database.ia_filterdb import Media, get_file_details, get_search_results
 from plugins.group_filter import global_filters
 
 import os
-
+req_channel = int(os.environ.get('REQ_CHANNEL','-1001910762212'))
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.ERROR)
