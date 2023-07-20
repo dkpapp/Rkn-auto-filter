@@ -14,16 +14,13 @@ import asyncio
 async def verupikkals(bot, message):
     users = await db.get_all_users()
     b_msg = message.reply_to_message
-    sts = await message.reply_text(
-        text='Broadcasting your messages...'
-    )
+    sts = await message.reply_text('Broadcasting your messages...')
     start_time = time.time()
     total_users = await db.total_users_count()
     done = 0
     blocked = 0
     deleted = 0
     failed =0
-
     success = 0
     async for user in users:
         pti, sh = await broadcast_messages(int(user['id']), b_msg)
