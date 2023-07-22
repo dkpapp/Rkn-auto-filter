@@ -11,6 +11,9 @@ from database.users_chats_db import db
 from database.ia_filterdb import Media, get_file_details, get_search_results
 from plugins.group_filter import global_filters
 
+import os
+req_channel = int(os.environ.get('REQ_CHANNEL','-1001821315484'))
+
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.ERROR)
 
@@ -144,7 +147,8 @@ async def pm_AutoFilter(client, msg, pmspoll=False):
         if 2 < len(message.text) < 100:
             search = message.text
             files, offset, total_results = await get_search_results(search.lower(), offset=0, filter=True)
-            if not files:               
+            if not files:
+                await client.send_massage(req_channel, f"#REQUESTED_CONTENT \n\nCONTENT NAME:{search} \nREQUESTED BY : {massage.from_user.first_name}\nUSER ID : {massage.from_user.id}", reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🦋 Mark As Done 🦋", callback_data="close_data")]]))
                 return await pm_spoll_choker(msg)              
         else:
             return 
