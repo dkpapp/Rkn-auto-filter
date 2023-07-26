@@ -50,7 +50,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     title = chat.title
                 except:
                     await query.message.edit_text("Make sure I'm present in your group!!", quote=True)
-                    return await query.answer('𝙿𝙻𝙴𝙰𝚂𝙴 𝚂𝙷𝙰𝚁𝙴 𝙰𝙽𝙳 𝚂𝚄𝙿𝙿𝙾𝚁𝚃')
+                    return await query.answer('𝖯𝗅𝖾𝖺𝗌𝖾 𝖲𝗁𝖺𝗋𝖾 & 𝖲𝗎𝗉𝗉𝗈𝗋𝗍')
             else:
                 await query.message.edit_text(
                     "I'm not connected to any groups!\nCheck /connections or connect to any groups",
@@ -87,7 +87,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 except:
                     pass
             else:
-                await query.answer("Buddy Don't Touch Others Property 😁", show_alert=True)
+                await query.answer("HOLD ON!!! that's not for you 👮‍♂️", show_alert=True)
     elif "groupcb" in query.data:
         await query.answer()
 
@@ -99,10 +99,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
         user_id = query.from_user.id
 
         if act == "":
-            stat = "𝙲𝙾𝙽𝙽𝙴𝙲𝚃"
+            stat = "𝖢𝗈𝗇𝗇𝖾𝖼𝗍"
             cb = "connectcb"
         else:
-            stat = "𝙳𝙸𝚂𝙲𝙾𝙽𝙽𝙴𝙲𝚃"
+            stat = "𝖣𝗂𝗌𝖼𝗈𝗇𝗇𝖾𝖼𝗍"
             cb = "disconnect"
 
         keyboard = InlineKeyboardMarkup([
@@ -116,7 +116,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=keyboard,
             parse_mode=enums.ParseMode.MARKDOWN
         )
-        return await query.answer('𝙿𝙻𝙴𝙰𝚂𝙴 𝚂𝙷𝙰𝚁𝙴 𝙰𝙽𝙳 𝚂𝚄𝙿𝙿𝙾𝚁𝚃')
+        return await query.answer('𝖯𝗅𝖾𝖺𝗌𝖾 𝖲𝗁𝖺𝗋𝖾 & 𝖲𝗎𝗉𝗉𝗈𝗋𝗍')
     elif "connectcb" in query.data:
         await query.answer()
 
@@ -137,7 +137,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             )
         else:
             await query.message.edit_text('Some error occurred!!', parse_mode="md")
-        return await query.answer('𝙿𝙻𝙴𝙰𝚂𝙴 𝚂𝙷𝙰𝚁𝙴 𝙰𝙽𝙳 𝚂𝚄𝙿𝙿𝙾𝚁𝚃')
+        return await query.answer('𝖯𝗅𝖾𝖺𝗌𝖾 𝖲𝗁𝖺𝗋𝖾 & 𝖲𝗎𝗉𝗉𝗈𝗋𝗍')
     elif "disconnect" in query.data:
         await query.answer()
 
@@ -178,7 +178,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 f"Some error occurred!!",
                 parse_mode=enums.ParseMode.MARKDOWN
             )
-        return await query.answer('𝙿𝙻𝙴𝙰𝚂𝙴 𝚂𝙷𝙰𝚁𝙴 𝙰𝙽𝙳 𝚂𝚄𝙿𝙿𝙾𝚁𝚃')
+        return await query.answer('𝖯𝗅𝖾𝖺𝗌𝖾 𝖲𝗁𝖺𝗋𝖾 & 𝖲𝗎𝗉𝗉𝗈𝗋𝗍')
     elif query.data == "backcb":
         await query.answer()
 
@@ -189,7 +189,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             await query.message.edit_text(
                 "There are no active connections!! Connect to some groups first.",
             )
-            return await query.answer('𝙿𝙻𝙴𝙰𝚂𝙴 𝚂𝙷𝙰𝚁𝙴 𝙰𝙽𝙳 𝚂𝚄𝙿𝙿𝙾𝚁𝚃')
+            return await query.answer('𝖯𝗅𝖾𝖺𝗌𝖾 𝖲𝗁𝖺𝗋𝖾 & 𝖲𝗎𝗉𝗉𝗈𝗋𝗍')
         buttons = []
         for groupid in groupids:
             try:
@@ -230,6 +230,140 @@ async def cb_handler(client: Client, query: CallbackQuery):
             alert = alerts[int(i)]
             alert = alert.replace("\\n", "\n").replace("\\t", "\t")
             await query.answer(alert, show_alert=True)
+
+    elif query.data.startswith("notify_userupl"):
+        _, user_id, movie = query.data.split(":")
+        # Send message to user
+        try:
+            btn = [[
+                InlineKeyboardButton(text=f"🔍 Search Here 🔎", url="https://t.me/+4B6zC-A1gYMyYmM1")
+            ],[
+                InlineKeyboardButton(text=f"🐞 REPORT ISSUE 🐞", url=f"https://t.me/Srikanth_Official_Bot")
+            ]]
+
+
+            btn_snowdv = [
+                [
+                InlineKeyboardButton(text=f"🗑 Delete Log ❌", callback_data = "close_data")
+                ]]
+            reply_markup_snowdv = InlineKeyboardMarkup(btn_snowdv) 
+            reply_markup = InlineKeyboardMarkup(btn)
+            await client.send_message(int(user_id), f"✅ Hey Dear, Your requested content named `{movie}` is now available in our database! You can easily get this movie by searching it's correct name in our official group...\n\n❤ Thank You for Supporting us", reply_markup=reply_markup)
+            await query.edit_message_text(text=f"- __**User notified successfully sweetie...✅**__\n\n⏳**Status** : Upload done ✅.\n🪪**UserID** : `{user_id}`\n🎞**Content** : `{movie}`\n\n\n🦋", reply_markup=reply_markup_snowdv)
+        # Delete callback query message
+            await query.answer()
+            await query.delete()
+        except:
+            await query.answer("something went wrong", show_alert = True)
+            return
+        
+
+    elif query.data.startswith("notify_user_alrupl"):
+        _, user_id, movie = query.data.split(":")
+        # Send message to user
+        try:
+            btn = [[
+                InlineKeyboardButton(text=f"🔍 Search Here 🔎", url="https://t.me/+4B6zC-A1gYMyYmM1")
+            ],[
+                InlineKeyboardButton(text=f"🐞 REPORT ISSUE 🐞", url=f"https://t.me/Srikanth_Official_Bot")
+            ]]
+
+            btn_snowdv = [
+                [
+                InlineKeyboardButton(text=f"🗑 Delete Log ❌", callback_data = "close_data")
+                ]]
+            reply_markup_snowdv = InlineKeyboardMarkup(btn_snowdv)            
+            reply_markup = InlineKeyboardMarkup(btn)
+            await client.send_message(int(user_id), f"🛋 Hey Dear, Your requested content named `{movie}` is already available in our database! You can easily get this movie by searching it's correct name in our official group...\nSend details to Admin : \n\n❤ Thank You for Supporting us", reply_markup=reply_markup)
+            await query.edit_message_text(text=f"- __**User notified successfully sweetie...✅**__\n\n⏳**Status** : Already Uploaded ⚡.\n🪪**UserID** : `{user_id}`\n🎞**Content** : `{movie}`\n\n\n🦋",reply_markup=reply_markup_snowdv)
+        # Delete callback query message
+            await query.answer()
+            await query.delete()
+        except:
+            await query.answer("something went wrong", show_alert = True)
+            return
+
+
+    elif query.data.startswith("notify_user_not_avail"):
+        _, user_id, movie = query.data.split(":")
+        # Send message to user
+        try:
+            btn = [[
+                InlineKeyboardButton(text=f"🔍 Search Here 🔎", url="https://t.me/+4B6zC-A1gYMyYmM1")
+            ],[
+                InlineKeyboardButton(text=f"🐞 REPORT ISSUE 🐞", url=f"https://t.me/Srikanth_Official_Bot")
+            ]]
+
+            btn_snowdv = [
+                [
+                InlineKeyboardButton(text=f"🗑 Delete Log ❌", callback_data = "close_data")
+                ]]
+            reply_markup_snowdv = InlineKeyboardMarkup(btn_snowdv)
+            reply_markup = InlineKeyboardMarkup(btn)
+            await client.send_message(int(user_id), f"😒 oops! Dear, Your requested content named `{movie}` is not available right now, we are really trying our best to serve you this cotent,can you please provide us some more details related to your query {movie}, \n**Send here...**</a>\n\n❤ Thank You for Supporting us.", reply_markup=reply_markup)
+            await query.edit_message_text(text=f"- __**User notified successfully...✅**__\n\n⏳**Status** : Not Available 😒.\n🪪**UserID** : `{user_id}`\n🎞**Content** : `{movie}`\n\n\n🦋",reply_markup=reply_markup_snowdv, disable_web_page_preview=True)
+        # Delete callback query message
+            await query.answer()
+            await query.delete()
+        except Exception as e:
+            print(e)  # print the error message
+            await query.answer("something went wrong", show_alert=True)
+            return
+    
+
+    elif query.data.startswith("notify_user_req_rejected"):
+        _, user_id, movie = query.data.split(":")
+        # Send message to user
+        try:
+            btn = [[
+                InlineKeyboardButton(text=f"🔍 Search Here 🔎", url="https://t.me/+4B6zC-A1gYMyYmM1")
+            ],[
+                InlineKeyboardButton(text=f"🐞 REPORT ISSUE 🐞", url=f"https://t.me/Srikanth_Official_Bot")
+            ]]
+
+            btn_snowdv = [
+                [
+                InlineKeyboardButton(text=f"🗑 Delete Log ❌", callback_data = "close_data")
+                ]]
+            reply_markup_snowdv = InlineKeyboardMarkup(btn_snowdv) 
+            reply_markup = InlineKeyboardMarkup(btn)
+            await client.send_message(int(user_id), f"🙇‍♀️ Sorry Dear! Your requested content named `{movie}` is rejected by our **ADMiN**, we are really very sorry for the inconvenience, we can't process your request at the moment...\n\n❤️‍🩹Keep your search environment friendly, sweetheart!", reply_markup=reply_markup)
+            await query.edit_message_text(text=f"- __**User notified successfully sweetie...✅**__\n\n⏳**Status** : Request Rejected ❌.\n🪪**UserID** : `{user_id}`\n🎞**Content** : `{movie}`\n\n\n🦋",reply_markup=reply_markup_snowdv)
+        # Delete callback query message
+            await query.answer()
+            await query.delete()
+        except:
+            await query.answer("something went wrong", show_alert = True)
+            return
+        
+    
+    elif query.data.startswith("notify_user_spelling_error"):
+        _, user_id, movie = query.data.split(":")
+        # Send message to user
+        try:
+            btn = [[
+                InlineKeyboardButton(text=f"🔍 Search Here 🔎", url="https://t.me/+4B6zC-A1gYMyYmM1")
+            ],[
+                InlineKeyboardButton(text=f"🐞 REPORT ISSUE 🐞", url=f"https://t.me/Srikanth_Official_Bot")
+            ]]
+
+
+            btn_snowdv = [
+                [
+                InlineKeyboardButton(text=f"🗑 Delete Log ❌", callback_data = "close_data")
+                ]]
+            reply_markup_snowdv = InlineKeyboardMarkup(btn_snowdv) 
+            reply_markup = InlineKeyboardMarkup(btn)
+            await client.send_message(int(user_id), f"🌍 Your spelling matters.\nThe requested content `{movie}` is available in our database, You were unable to get it because of your spelling mistake.🧐 Please make sure you've spelled correctly while searching content in group...\n\n❤Thank u for supporting us.", reply_markup=reply_markup)
+            await query.edit_message_text(text=f"- __**User notified successfully sweetie...✅**__\n\n⏳**Status** : Spelling error 🖊.\n🪪**UserID** : `{user_id}`\n🎞**Content** : `{movie}`\n\n\n🦋",reply_markup=reply_markup_snowdv)
+        # Delete callback query message
+            await query.answer()
+            await query.delete()
+        except:
+            await query.answer("something went wrong", show_alert = True)
+            return
+        
+    
     
     if query.data.startswith("pmfile"):
         ident, file_id = query.data.split("#")
@@ -286,9 +420,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
             if AUTH_CHANNEL and not await is_subscribed(client, query):
                 await query.answer(url=f"https://t.me/{temp.U_NAME}?start={ident}_{file_id}")
                 return
-            elif settings['botpm']:
-                await query.answer(url=f"https://t.me/{temp.U_NAME}?start={ident}_{file_id}")
-                return
+            # elif settings['botpm']:
+            #     await query.answer(url=f"https://t.me/{temp.U_NAME}?start={ident}_{file_id}")
+            #     return
             else:
                 await client.send_cached_media(
                     chat_id=query.from_user.id,
@@ -343,7 +477,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 ],[
                 InlineKeyboardButton(text="𝖲𝗍𝗂𝖼𝗄𝖾𝗋", callback_data="rmbgsticker"),
                 ],[
-                InlineKeyboardButton('𝙱𝙰𝙲𝙺', callback_data='photo')
+                InlineKeyboardButton('𝖡𝖺𝖼𝗄', callback_data='photo')
              ]])
         )
     elif query.data == "stick":
@@ -354,7 +488,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                ],[                    
                InlineKeyboardButton(text="𝖢𝗂𝗋𝖼𝗅𝖾", callback_data="circle_sticker")
                ],[
-               InlineKeyboardButton('𝙱𝙰𝙲𝙺', callback_data='photo')
+               InlineKeyboardButton('𝖡𝖺𝖼𝗄', callback_data='photo')
                ]]                
            )
        )
@@ -366,7 +500,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                ],[
                InlineKeyboardButton(text="270", callback_data="270")
                ],[
-               InlineKeyboardButton('𝙱𝙰𝙲𝙺', callback_data='photo')
+               InlineKeyboardButton('𝖡𝖺𝖼𝗄', callback_data='photo')
                ]]
            )
        )
@@ -376,7 +510,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                InlineKeyboardButton(text="𝖭𝗈𝗋𝗆𝖺𝗅", callback_data="normalglitch"),
                InlineKeyboardButton(text="𝖲𝖼𝖺𝗇 𝖫𝖺𝗂𝗇𝗌", callback_data="scanlineglitch")
                ],[
-               InlineKeyboardButton('𝙱𝙰𝙲𝙺', callback_data='photo')
+               InlineKeyboardButton('𝖡𝖺𝖼𝗄', callback_data='photo')
                ]]
            )
        )
@@ -390,7 +524,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                InlineKeyboardButton(text="4", callback_data="normalglitch4"),
                InlineKeyboardButton(text="5", callback_data="normalglitch5"),
                ],[
-               InlineKeyboardButton('𝙱𝙰𝙲𝙺', callback_data='glitch')
+               InlineKeyboardButton('𝖡𝖺𝖼𝗄', callback_data='glitch')
                ]]
            )
        )
@@ -404,7 +538,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                InlineKeyboardButton(text="4", callback_data="scanlineglitch4"),
                InlineKeyboardButton(text="5", callback_data="scanlineglitch5"),
                ],[
-               InlineKeyboardButton('𝙱𝙰𝙲𝙺', callback_data='glitch')
+               InlineKeyboardButton('𝖡𝖺𝖼𝗄', callback_data='glitch')
                ]]
            )
        )
@@ -416,7 +550,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                ],[
                InlineKeyboardButton(text="𝖦𝖺𝗎𝗌𝗌𝗂𝖺𝗇", callback_data="gas")
                ],[
-               InlineKeyboardButton('𝙱𝙰𝙲𝙺', callback_data='photo')
+               InlineKeyboardButton('𝖡𝖺𝖼𝗄', callback_data='photo')
                ]]
            )
        )
@@ -426,7 +560,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                InlineKeyboardButton(text="𝖶𝗂𝗍𝗁 𝖡𝖦", callback_data="circlewithbg"),
                InlineKeyboardButton(text="𝖶𝗂𝗍𝗁𝗈𝗎𝗍 𝖡𝖦", callback_data="circlewithoutbg"),
                ],[
-               InlineKeyboardButton('𝙱𝙰𝙲𝙺', callback_data='photo')
+               InlineKeyboardButton('𝖡𝖺𝖼𝗄', callback_data='photo')
                ]]
            )
        )
@@ -439,7 +573,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                InlineKeyboardButton(text="𝖡𝗅𝖺𝖼𝗄", callback_data="black"),
                InlineKeyboardButton(text="𝖡𝗅𝗎𝖾", callback_data="blue"),
                ],[                    
-               InlineKeyboardButton('𝙱𝙰𝙲𝙺', callback_data='photo')   
+               InlineKeyboardButton('𝖡𝖺𝖼𝗄', callback_data='photo')   
                ]]                
            )
        )
@@ -527,10 +661,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
     elif query.data == "start":                        
         buttons = [[
-            InlineKeyboardButton("➕️ 𝙰𝙳𝙳 𝙼𝙴 𝚃𝙾 𝚈𝙾𝚄𝚁 𝙶𝚁𝙾𝚄𝙿 ➕️", url=f"http://t.me/RKN_MOVIE_SEARCH_BOT?startgroup=true")
+            InlineKeyboardButton("➕️ 𝙰𝙳𝙳 𝙼𝙴 𝚃𝙾 𝚈𝙾𝚄𝚁 𝙶𝚁𝙾𝚄𝙿 ➕️", url=f"http://t.me/{temp.U_NAME}?startgroup=true")
             ],[
             InlineKeyboardButton("🔍 𝚂𝙴𝙰𝚁𝙲𝙷 🔍", switch_inline_query_current_chat=''), 
-            InlineKeyboardButton("📢 𝚄𝙿𝙳𝙰𝚃𝙴𝚂 📢", url="https://t.me/RknDeveloperSupport")
+            InlineKeyboardButton("📢 𝚄𝙿𝙳𝙰𝚃𝙴𝚂 📢", url="https://t.me/GeethaMovies")
             ],[
             InlineKeyboardButton("♻️ 𝙷𝙴𝙻𝙿 ♻️", callback_data="help"),
             InlineKeyboardButton("💫 𝙰𝙱𝙾𝚄𝚃 💫", callback_data="about")
@@ -617,6 +751,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InputMediaPhoto(random.choice(PICS), script.ABOUT_TXT.format(temp.B_NAME), enums.ParseMode.HTML),
             reply_markup=reply_markup,           
         )
+
     elif query.data == "restric":
         buttons = [[
             InlineKeyboardButton('𝙱𝙰𝙲𝙺', callback_data='help')
@@ -898,10 +1033,3 @@ async def cb_handler(client: Client, query: CallbackQuery):
             ]]
             reply_markup = InlineKeyboardMarkup(buttons)
             await query.message.edit_reply_markup(reply_markup)
-
-
-
-
-
-
-
