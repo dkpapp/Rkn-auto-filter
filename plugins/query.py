@@ -236,9 +236,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
         # Send message to user
         try:
             btn = [[
-                InlineKeyboardButton(text=f"🔍 Search Here 🔎", url="https://t.me/CG_TVSHOW_SERIES_GROUP")
+                InlineKeyboardButton(text=f"🔍 𝚂𝚎𝚊𝚛𝚌𝚑 𝙷𝚎𝚛𝚎 🔎", url="https://t.me/CG_TVSHOW_SERIES_GROUP")
             ],[
-                InlineKeyboardButton(text=f"🐞 REPORT ISSUE 🐞", url=f"https://t.me/RknDeveloperr")
+                InlineKeyboardButton(text=f"🐞 ʀᴇᴘᴏʀᴛ ɪssᴜᴇ 🐞", url=f"https://t.me/RknDeveloperr")
             ]]
 
 
@@ -263,9 +263,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
         # Send message to user
         try:
             btn = [[
-                InlineKeyboardButton(text=f"🔍 Search Here 🔎", url="https://t.me/CG_TVSHOW_SERIES_GROUP")
+                InlineKeyboardButton(text=f"🔍 𝚂𝚎𝚊𝚛𝚌𝚑 𝙷𝚎𝚛𝚎 🔎", url="https://t.me/CG_TVSHOW_SERIES_GROUP")
             ],[
-                InlineKeyboardButton(text=f"🐞 REPORT ISSUE 🐞", url=f"https://t.me/RknDeveloperr")
+                InlineKeyboardButton(text=f"🐞 ʀᴇᴘᴏʀᴛ ɪssᴜᴇ 🐞", url=f"https://t.me/RknDeveloperr")
             ]]
 
             btn_snowdv = [
@@ -289,9 +289,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
         # Send message to user
         try:
             btn = [[
-                InlineKeyboardButton(text=f"🔍 Search Here 🔎", url="https://t.me/CG_TVSHOW_SERIES_GROUP")
+                InlineKeyboardButton(text=f"🔍 𝚂𝚎𝚊𝚛𝚌𝚑 𝙷𝚎𝚛𝚎 🔎", url="https://t.me/CG_TVSHOW_SERIES_GROUP")
             ],[
-                InlineKeyboardButton(text=f"🐞 REPORT ISSUE 🐞", url=f"https://t.me/RknDeveloperr")
+                InlineKeyboardButton(text=f"🐞 ʀᴇᴘᴏʀᴛ ɪssᴜᴇ 🐞", url=f"https://t.me/RknDeveloperr")
             ]]
 
             btn_snowdv = [
@@ -316,9 +316,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
         # Send message to user
         try:
             btn = [[
-                InlineKeyboardButton(text=f"🔍 Search Here 🔎", url="https://t.me/CG_TVSHOW_SERIES_GROUP")
+                InlineKeyboardButton(text=f"🔍 𝚂𝚎𝚊𝚛𝚌𝚑 𝙷𝚎𝚛𝚎 🔎", url="https://t.me/CG_TVSHOW_SERIES_GROUP")
             ],[
-                InlineKeyboardButton(text=f"🐞 REPORT ISSUE 🐞", url=f"https://t.me/RknDeveloperr")
+                InlineKeyboardButton(text=f"🐞 ʀᴇᴘᴏʀᴛ ɪssᴜᴇ 🐞", url=f"https://t.me/RknDeveloperr")
             ]]
 
             btn_snowdv = [
@@ -342,9 +342,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
         # Send message to user
         try:
             btn = [[
-                InlineKeyboardButton(text=f"🔍 Search Here 🔎", url="https://t.me/CG_TVSHOW_SERIES_GROUP")
+                InlineKeyboardButton(text=f"🔍 𝚂𝚎𝚊𝚛𝚌𝚑 𝙷𝚎𝚛𝚎 🔎", url="https://t.me/CG_TVSHOW_SERIES_GROUP")
             ],[
-                InlineKeyboardButton(text=f"🐞 REPORT ISSUE 🐞", url=f"https://t.me/RknDeveloperr")
+                InlineKeyboardButton(text=f"🐞 ʀᴇᴘᴏʀᴛ ɪssᴜᴇ 🐞", url=f"https://t.me/RknDeveloperr")
             ]]
 
 
@@ -442,7 +442,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
       
     elif query.data.startswith("checksub"):
         if AUTH_CHANNEL and not await is_subscribed(client, query):
-            await query.answer("I Like Your Smartness, But Don't Be Oversmart Okay", show_alert=True)
+            await query.answer("𝙸 𝙻𝚒𝚔𝚎 𝚈𝚘𝚞𝚛 𝚂𝚖𝚊𝚛𝚝𝚗𝚎𝚜𝚜, 𝙱𝚞𝚝 𝙳𝚘𝚗'𝚝 𝙱𝚎 𝙾𝚟𝚎𝚛𝚜𝚖𝚊𝚛𝚝 𝙾𝚔𝚊𝚢", show_alert=True)
             return
         ident, file_id = query.data.split("#")
         files_ = await get_file_details(file_id)
@@ -668,6 +668,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
             ],[
             InlineKeyboardButton("♻️ 𝙷𝙴𝙻𝙿 ♻️", callback_data="help"),
             InlineKeyboardButton("💫 𝙰𝙱𝙾𝚄𝚃 💫", callback_data="about")
+            ],[
+            InlineKeyboardButton("🎬 𝙼𝙾𝚅𝙸𝙴𝚂 𝙶𝚁𝙾𝚄𝙿 🎬", url=f"https://t.me/CG_OF_MOVIES_GROUP")
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.edit_message_media(
