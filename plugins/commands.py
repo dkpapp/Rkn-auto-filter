@@ -46,7 +46,7 @@ async def start(client, message):
             InlineKeyboardButton("♻️ 𝙷𝙴𝙻𝙿 ♻️", callback_data="help"),
             InlineKeyboardButton("💫 𝙰𝙱𝙾𝚄𝚃 💫", callback_data="about")
             ],[
-            InlineKeyboardButton("🎬 𝙰𝙻𝙻 𝚂𝙴𝚁𝙸𝙴𝚂 𝙶𝚁𝙾𝚄𝙿 🎬", url=f"https://t.me/CG_TVSHOW_SERIES_GROUP")
+            InlineKeyboardButton("🎬 𝙼𝙾𝚅𝙸𝙴𝚂 𝙶𝚁𝙾𝚄𝙿 🎬", url=f"https://t.me/CG_OF_MOVIES_GROUP")
          ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_chat_action(enums.ChatAction.TYPING)
@@ -98,7 +98,7 @@ async def start(client, message):
             InlineKeyboardButton("♻️ 𝙷𝙴𝙻𝙿 ♻️", callback_data="help"),
             InlineKeyboardButton("💫 𝙰𝙱𝙾𝚄𝚃 💫", callback_data="about")
             ],[
-            InlineKeyboardButton("🎬 𝙰𝙻𝙻 𝚂𝙴𝚁𝙸𝙴𝚂 𝙶𝚁𝙾𝚄𝙿 🎬", url=f"https://t.me/CG_TVSHOW_SERIES_GROUP")
+            InlineKeyboardButton("🎬 𝙼𝙾𝚅𝙸𝙴𝚂 𝙶𝚁𝙾𝚄𝙿 🎬", url=f"https://t.me/CG_OF_MOVIES_GROUP")
          ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_chat_action(enums.ChatAction.TYPING)
