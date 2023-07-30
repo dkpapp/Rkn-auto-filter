@@ -236,9 +236,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
         # Send message to user
         try:
             btn = [[
-                InlineKeyboardButton(text=f"🔍 Search Here 🔎", url="https://t.me/+4B6zC-A1gYMyYmM1")
+                InlineKeyboardButton(text=f"🔍 Search Here 🔎", url="https://t.me/CG_TVSHOW_SERIES_GROUP")
             ],[
-                InlineKeyboardButton(text=f"🐞 REPORT ISSUE 🐞", url=f"https://t.me/Srikanth_Official_Bot")
+                InlineKeyboardButton(text=f"🐞 REPORT ISSUE 🐞", url=f"https://t.me/RknDeveloperr")
             ]]
 
 
@@ -263,9 +263,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
         # Send message to user
         try:
             btn = [[
-                InlineKeyboardButton(text=f"🔍 Search Here 🔎", url="https://t.me/+4B6zC-A1gYMyYmM1")
+                InlineKeyboardButton(text=f"🔍 Search Here 🔎", url="https://t.me/CG_TVSHOW_SERIES_GROUP")
             ],[
-                InlineKeyboardButton(text=f"🐞 REPORT ISSUE 🐞", url=f"https://t.me/Srikanth_Official_Bot")
+                InlineKeyboardButton(text=f"🐞 REPORT ISSUE 🐞", url=f"https://t.me/RknDeveloperr")
             ]]
 
             btn_snowdv = [
@@ -289,9 +289,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
         # Send message to user
         try:
             btn = [[
-                InlineKeyboardButton(text=f"🔍 Search Here 🔎", url="https://t.me/+4B6zC-A1gYMyYmM1")
+                InlineKeyboardButton(text=f"🔍 Search Here 🔎", url="https://t.me/CG_TVSHOW_SERIES_GROUP")
             ],[
-                InlineKeyboardButton(text=f"🐞 REPORT ISSUE 🐞", url=f"https://t.me/Srikanth_Official_Bot")
+                InlineKeyboardButton(text=f"🐞 REPORT ISSUE 🐞", url=f"https://t.me/RknDeveloperr")
             ]]
 
             btn_snowdv = [
@@ -316,9 +316,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
         # Send message to user
         try:
             btn = [[
-                InlineKeyboardButton(text=f"🔍 Search Here 🔎", url="https://t.me/+4B6zC-A1gYMyYmM1")
+                InlineKeyboardButton(text=f"🔍 Search Here 🔎", url="https://t.me/CG_TVSHOW_SERIES_GROUP")
             ],[
-                InlineKeyboardButton(text=f"🐞 REPORT ISSUE 🐞", url=f"https://t.me/Srikanth_Official_Bot")
+                InlineKeyboardButton(text=f"🐞 REPORT ISSUE 🐞", url=f"https://t.me/RknDeveloperr")
             ]]
 
             btn_snowdv = [
@@ -342,9 +342,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
         # Send message to user
         try:
             btn = [[
-                InlineKeyboardButton(text=f"🔍 Search Here 🔎", url="https://t.me/+4B6zC-A1gYMyYmM1")
+                InlineKeyboardButton(text=f"🔍 Search Here 🔎", url="https://t.me/CG_TVSHOW_SERIES_GROUP")
             ],[
-                InlineKeyboardButton(text=f"🐞 REPORT ISSUE 🐞", url=f"https://t.me/Srikanth_Official_Bot")
+                InlineKeyboardButton(text=f"🐞 REPORT ISSUE 🐞", url=f"https://t.me/RknDeveloperr")
             ]]
 
 
@@ -664,7 +664,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton("➕️ 𝙰𝙳𝙳 𝙼𝙴 𝚃𝙾 𝚈𝙾𝚄𝚁 𝙶𝚁𝙾𝚄𝙿 ➕️", url=f"http://t.me/{temp.U_NAME}?startgroup=true")
             ],[
             InlineKeyboardButton("🔍 𝚂𝙴𝙰𝚁𝙲𝙷 🔍", switch_inline_query_current_chat=''), 
-            InlineKeyboardButton("📢 𝚄𝙿𝙳𝙰𝚃𝙴𝚂 📢", url="https://t.me/GeethaMovies")
+            InlineKeyboardButton("📢 𝚄𝙿𝙳𝙰𝚃𝙴𝚂 📢", url="https://t.me/RknDeveloper")
             ],[
             InlineKeyboardButton("♻️ 𝙷𝙴𝙻𝙿 ♻️", callback_data="help"),
             InlineKeyboardButton("💫 𝙰𝙱𝙾𝚄𝚃 💫", callback_data="about")
