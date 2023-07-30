@@ -276,6 +276,6 @@ async def pm_spoll_choker(msg):
     PM_SPELL_CHECK[msg.id] = movielist
     btn = [[InlineKeyboardButton(text=movie.strip(), callback_data=f"pmspelling#{user}#{k}")] for k, movie in enumerate(movielist)]
     btn.append([InlineKeyboardButton(text="Close", callback_data=f'pmspelling#{user}#close_spellcheck')])
-    l = await msg.reply("𝖢𝖺𝗇'𝗍 𝖥𝗂𝗇𝖽 𝖨𝗍 𝖡𝗋𝖺𝗏 𝖣𝗈 𝗒𝗈𝗎 𝗆𝖾𝖺𝗇 𝖺𝗇𝗒 𝗈𝖿 𝗍𝗁𝖾𝗌𝖾?", reply_markup=InlineKeyboardMarkup(btn), reply_to_message_id=msg.id)
+    l = await msg.reply("👋 𝙲𝚊𝚗'𝚝 𝙵𝚒𝚗𝚍 𝙸𝚝 𝙱𝚛𝚊𝚟 𝙳𝚘 𝚈𝚘𝚞 𝙼𝚎𝚊𝚗 𝙰𝚗𝚢 𝙾𝚏 𝚃𝚑𝚎𝚜𝚎? 💫", reply_markup=InlineKeyboardMarkup(btn), reply_to_message_id=msg.id)
     await asyncio.sleep(600)
     await l.delete()
