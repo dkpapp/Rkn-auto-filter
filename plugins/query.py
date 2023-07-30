@@ -236,7 +236,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         # Send message to user
         try:
             btn = [[
-                InlineKeyboardButton(text=f"🔍 𝚂𝚎𝚊𝚛𝚌𝚑 𝙷𝚎𝚛𝚎 🔎", url="https://t.me/CG_TVSHOW_SERIES_GROUP")
+                InlineKeyboardButton(text=f"🔍 𝚂𝚎𝚊𝚛𝚌𝚑 𝙷𝚎𝚛𝚎 🔎", url="https://t.me/CG_OF_MOVIES_GROUP")
             ],[
                 InlineKeyboardButton(text=f"🐞 ʀᴇᴘᴏʀᴛ ɪssᴜᴇ 🐞", url=f"https://t.me/RknDeveloperr")
             ]]
@@ -263,7 +263,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         # Send message to user
         try:
             btn = [[
-                InlineKeyboardButton(text=f"🔍 𝚂𝚎𝚊𝚛𝚌𝚑 𝙷𝚎𝚛𝚎 🔎", url="https://t.me/CG_TVSHOW_SERIES_GROUP")
+                InlineKeyboardButton(text=f"🔍 𝚂𝚎𝚊𝚛𝚌𝚑 𝙷𝚎𝚛𝚎 🔎", url="https://t.me/CG_OF_MOVIES_GROUP")
             ],[
                 InlineKeyboardButton(text=f"🐞 ʀᴇᴘᴏʀᴛ ɪssᴜᴇ 🐞", url=f"https://t.me/RknDeveloperr")
             ]]
@@ -289,7 +289,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         # Send message to user
         try:
             btn = [[
-                InlineKeyboardButton(text=f"🔍 𝚂𝚎𝚊𝚛𝚌𝚑 𝙷𝚎𝚛𝚎 🔎", url="https://t.me/CG_TVSHOW_SERIES_GROUP")
+                InlineKeyboardButton(text=f"🔍 𝚂𝚎𝚊𝚛𝚌𝚑 𝙷𝚎𝚛𝚎 🔎", url="https://t.me/CG_OF_MOVIES_GROUP")
             ],[
                 InlineKeyboardButton(text=f"🐞 ʀᴇᴘᴏʀᴛ ɪssᴜᴇ 🐞", url=f"https://t.me/RknDeveloperr")
             ]]
@@ -316,7 +316,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         # Send message to user
         try:
             btn = [[
-                InlineKeyboardButton(text=f"🔍 𝚂𝚎𝚊𝚛𝚌𝚑 𝙷𝚎𝚛𝚎 🔎", url="https://t.me/CG_TVSHOW_SERIES_GROUP")
+                InlineKeyboardButton(text=f"🔍 𝚂𝚎𝚊𝚛𝚌𝚑 𝙷𝚎𝚛𝚎 🔎", url="https://t.me/CG_OF_MOVIES_GROUP")
             ],[
                 InlineKeyboardButton(text=f"🐞 ʀᴇᴘᴏʀᴛ ɪssᴜᴇ 🐞", url=f"https://t.me/RknDeveloperr")
             ]]
@@ -342,7 +342,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         # Send message to user
         try:
             btn = [[
-                InlineKeyboardButton(text=f"🔍 𝚂𝚎𝚊𝚛𝚌𝚑 𝙷𝚎𝚛𝚎 🔎", url="https://t.me/CG_TVSHOW_SERIES_GROUP")
+                InlineKeyboardButton(text=f"🔍 𝚂𝚎𝚊𝚛𝚌𝚑 𝙷𝚎𝚛𝚎 🔎", url="https://t.me/CG_OF_MOVIES_GROUP")
             ],[
                 InlineKeyboardButton(text=f"🐞 ʀᴇᴘᴏʀᴛ ɪssᴜᴇ 🐞", url=f"https://t.me/RknDeveloperr")
             ]]
