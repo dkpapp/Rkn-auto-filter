@@ -392,7 +392,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     caption=f_caption,
                     protect_content=True if ident == "pmfilep" else False,
                     reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton('𝗠𝗮𝗶𝗻 𝗚𝗿𝗼𝘂𝗽', url="https://t.me/Mannu_production") ] ] ))
-                )                       
+                                       
         except Exception as e:
             await query.answer(f"⚠️ Error {e}", show_alert=True)
         
@@ -431,7 +431,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     caption=f_caption,
                     protect_content=True if ident == "filep" else False,
                     reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton('𝗠𝗮𝗶𝗻 𝗚𝗿𝗼𝘂𝗽', url="https://t.me/Mannu_production") ] ] ))
-                )
+                
                 await query.answer('Check PM, I have sent files in pm 🙂', show_alert=False)
         except UserIsBlocked:
             await query.answer('Unblock the bot mahn !', show_alert=True)
@@ -467,8 +467,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
             chat_id=query.from_user.id,
             file_id=file_id,
             caption=f_caption,
-            protect_content=True if ident == 'checksubp' else False
-        )
+            protect_content=True if ident == 'checksubp' else False,
+            reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton('𝗠𝗮𝗶𝗻 𝗚𝗿𝗼𝘂𝗽', url="https://t.me/MANNU_PRODUCTION") ] ] ))
+        
 
 
     elif query.data == "removebg":
