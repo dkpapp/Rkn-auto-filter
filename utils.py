@@ -424,6 +424,29 @@ def humanbytes(size):
 
 
 async def get_shortlink(link):
+    https = link.split(":")[0]
+    if "http" == https:
+        https = "https"
+        link = link.replace("http", https)
+    api_link = "https://api.shareus.io/easy_api"
+    params = {
+        "key": SHORT_API,
+        "link": link
+    }
+    try:
+        # Send the GET request
+        response = requests.get(api_link, params=params)
+ 
+        # Check if the request was successful (status code 200)
+        if response.status_code == 200:
+            # Retrieve the plain text response
+            plain_text_response = response.text
+            return plain_text_response
+        else:
+            print("Error:", response.status_code)
+    except requests.exceptions.RequestException as e:
+        print("Error:", e)
+    '''
 
     url = f'{SHORT_URL}/api'
     params = {
@@ -442,3 +465,4 @@ async def get_shortlink(link):
     except Exception as e:
         logger.error(e)
         return link
+'''
