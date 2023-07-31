@@ -390,7 +390,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     chat_id=query.from_user.id,
                     file_id=file_id,
                     caption=f_caption,
-                    protect_content=True if ident == "pmfilep" else False                    
+                    protect_content=True if ident == "pmfilep" else False,
+                    reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton('𝗠𝗮𝗶𝗻 𝗚𝗿𝗼𝘂𝗽', url="https://t.me/Mannu_production") ] ] ))
                 )                       
         except Exception as e:
             await query.answer(f"⚠️ Error {e}", show_alert=True)
@@ -420,15 +421,16 @@ async def cb_handler(client: Client, query: CallbackQuery):
             if AUTH_CHANNEL and not await is_subscribed(client, query):
                 await query.answer(url=f"https://t.me/{temp.U_NAME}?start={ident}_{file_id}")
                 return
-            # elif settings['botpm']:
-            #     await query.answer(url=f"https://t.me/{temp.U_NAME}?start={ident}_{file_id}")
-            #     return
+            elif settings['botpm']:
+                 await query.answer(url=f"https://t.me/{temp.U_NAME}?start={ident}_{file_id}")
+                 return
             else:
                 await client.send_cached_media(
                     chat_id=query.from_user.id,
                     file_id=file_id,
                     caption=f_caption,
-                    protect_content=True if ident == "filep" else False 
+                    protect_content=True if ident == "filep" else False,
+                    reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton('𝗠𝗮𝗶𝗻 𝗚𝗿𝗼𝘂𝗽', url="https://t.me/Mannu_production") ] ] ))
                 )
                 await query.answer('Check PM, I have sent files in pm 🙂', show_alert=False)
         except UserIsBlocked:
