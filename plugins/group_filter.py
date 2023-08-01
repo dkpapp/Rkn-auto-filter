@@ -250,10 +250,10 @@ async def auto_filter(client, msg, spoll=False):
         btn.append(
             [InlineKeyboardButton(text="📄 𝖯𝖠𝖦𝖤 1/1", callback_data="pages")]
         )
-if PM_IMDB.strip().lower() in ["true", "yes", "1", "enable", "y"]:
-    imdb = await get_poster(search)
-else:
-    imdb = None
+    if PM_IMDB.strip().lower() in ["true", "yes", "1", "enable", "y"]:
+        imdb = await get_poster(search)
+    else:
+        imdb = None
     TEMPLATE = settings['template']
     if imdb:
         cap = TEMPLATE.format(
