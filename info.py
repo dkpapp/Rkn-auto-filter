@@ -18,7 +18,7 @@ def is_enabled(value, default):
 
 
 # Request Channels
-REQ_CHANNEL = int(environ.get('REQ_CHANNEL', '-1001517645234'))
+REQ_CHANNEL = int(environ.get('REQ_CHANNEL', '-1001818554544'))
 
 
 # Bot information
